@@ -33,3 +33,4 @@
 	pop = stash pop
 	track = checkout --track
 	undo = reset --hard
+	untrack = rm --cached
