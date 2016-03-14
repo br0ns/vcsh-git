@@ -34,3 +34,4 @@
 	track = checkout --track
 	undo = reset --hard
 	untrack = rm --cached
+        cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
