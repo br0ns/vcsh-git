@@ -34,6 +34,7 @@
 	track = checkout --track
 	undo = reset --hard
 	untrack = rm --cached
-        cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+	deletemerged = "!git branch --merged | egrep -v '^(\\*|\\s+(master|dev.*|wip-.*|.*-wip)$)' | xargs -rn1 git branch -d"
+	dm = !git deletemerged
 [color]
 	ui = auto
