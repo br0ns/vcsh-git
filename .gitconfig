@@ -38,5 +38,6 @@
 	untrack = rm --cached
 	deletemerged = "!git branch --merged | egrep -v '^(\\*|\\s+(master|dev.*|wip-.*|.*-wip)$)' | xargs -rn1 git branch -d"
 	dm = !git deletemerged
+	export = !git-export
 [color]
 	ui = auto
